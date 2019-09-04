@@ -1,0 +1,38 @@
+:root {
+  --blue:#03A9F4
+    ;
+  --red:#F44336
+    ;
+  --green:#4CAF50
+    ;
+  --purple:#673AB7
+    ;
+  --orange:#FF9800
+    ;
+}
+
+p {
+  --blue:yellow;
+}
+
+p:first-child {
+  color: var(--blue);
+}
+
+p:nth-child(2) {
+  color: var(--purple);
+}
+
+p:nth-child(3) {
+  color: var(--green);
+}
+
+p:nth-child(4) {
+  font-size: env(--font-size);
+  padding: env(--branding-padding);
+}
+
+div {
+  color: var(--orange);
+}
+/*# sourceMappingURL=index.css.map */

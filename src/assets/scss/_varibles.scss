@@ -1,0 +1,15 @@
+$blue: #03A9F4 !default;
+$red:#F44336 !default;
+$green:#4CAF50 !default;
+$purple:#673AB7 !default;
+$orange:#FF9800 !default;
+$colors:() !default;
+$colors: map-merge(
+    (
+    "blue":$blue,
+    "red":$red,
+    "green":$green,
+    "purple":$purple,
+    "orange":$orange
+    ) , $colors)
+

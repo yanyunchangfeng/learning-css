@@ -1,0 +1,8 @@
+:root{
+    @each $key, $value in $colors{
+        --#{$key}:#{$value}
+    }
+}
+p{
+    --blue:yellow;
+}

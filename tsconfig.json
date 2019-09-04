@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "outDir": "./components",
+        "rootDir": "src/app",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "declaration": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "target": "es2015"
+    },
+    "include": ["src/**/*.ts"]
+}
