@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
 const pkg = require("../package.json");
+const postcssEnvFunction = require('postcss-env-function');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -43,7 +44,23 @@ module.exports = merge(commonConfig, {
                 use: [
                   { loader: MiniCssExtractPlugin.loader },
                   { loader: "css-loader"},
-                  { loader: "postcss-loader"},
+                  { loader: "postcss-loader",options: {
+                    ident: 'postcss',
+                    plugins: () => [
+                        postcssEnvFunction({
+                            importFrom: [
+                            'css-env-variables.json', // { "environment-variables": { "--branding-padding": "20px" } }
+                              {
+                                environmentVariables: { '--branding-padding': '20px' }
+                              },
+                              () => {
+                                const environmentVariables = { '--branding-padding': '20px' };
+                           
+                                return { environmentVariables };
+                              }
+                            ]
+                          })
+                    ]}},
                   { loader: "sass-loader" }
                 ]
             }

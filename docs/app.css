@@ -1,0 +1,1 @@
+/*! Copyright By yanyunchangfeng */:root{--blue:#03a9f4;--red:#f44336;--green:#4caf50;--purple:#673ab7;--orange:#ff9800}p{--blue:#ff0}p:first-child{color:var(--blue)}p:nth-child(2){color:var(--purple)}p:nth-child(3){color:var(--green)}p:nth-child(4){font-size:22px;padding:env(--branding-padding)}div{color:var(--orange)}

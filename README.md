@@ -1,3 +1,4 @@
+[English](README.en.md) |  简体中文  
 <p align="center">
     <img width="300" src="src/assets/img/yanyunchangfeng.png">
 </p>
@@ -6,8 +7,9 @@
 你好，我是徐晓东，笔名[燕云长风](https://yanyunchangfeng.com)。大漠穷秋于 2019-03-16 21:22 赠此笔名。   
 寓意：结合李白著名的边塞诗《关山月》取【燕云长风】—— 长风几万里，吹度玉门关。
 
-这是web components的讲解演示，如下:
-[web-components](src/app/index.ts)
+## scss & css future function
+
+[css-var-env](src/index.css)
 
 ## Jest Unit 测试
 
