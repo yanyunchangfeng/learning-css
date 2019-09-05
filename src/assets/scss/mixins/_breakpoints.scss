@@ -1,0 +1,11 @@
+
+
+
+@function breakpoint-infix($name,$breakpoints:$grid-breakpons){
+    @return if(breakpoint-min($name,$breakpoints) == null, "", "-#{$name}");
+}
+
+@function breakpoint-min($name,$breakpoints:$grid-breakpons){
+    $min:map-get($breakpoints ,$name);
+    @return if($min != 0, $min, null);
+}

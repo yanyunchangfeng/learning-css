@@ -1,0 +1,13 @@
+
+@mixin make-grid-colums($columns:$grid-columns,$gutter:$grid-gutter-width,$breakpoints:$gird-breakpoints){
+   %grid-column{
+    position: relative;
+    width: 100%;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+   }
+   // % 占位符选择器，优点：不会将预定义的css规则编译输出
+   @each $breakpoint in map-keys($breakpoints){
+       $infix:breakpoint-infix($breakpoint,$breakpoints)
+   }
+}
