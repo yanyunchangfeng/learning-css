@@ -1,8 +1,43 @@
 :root{
     @each $key, $value in $colors{
-        --#{$key}:#{$value}
+        --#{$key}:#{$value};
+        // 自定义的变量，必须使用插值 #{}
+       
+
     }
+}
+$font-size: 12px;
+$line-height:14px;
+$padding:10px;
+ // 插值还有一种用法，就是避免两个变量进行数学运算 
+html{
+    font: #{$font-size}/#{$line-height};
+    height: calc(100% - #{$padding});
 }
 // p{
 //     --blue:yellow;
 // }
+
+//选择器的继承与覆盖
+@mixin ie8{
+    .ie8 & {
+      @content
+    }
+}
+  
+  .box{
+    width:50px;
+    
+    @include ie8{
+      width:150px  ;//将会继承混合宏里面的.ie8 &，&将在这里继承.box
+    }
+    
+}
+//编译出來的CSS
+
+// .box {
+//     width:50px
+//   }
+//   .ie8 .box {
+//     width:150px
+//   }

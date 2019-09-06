@@ -2,11 +2,18 @@
 
 @function breakpoint-next($name,$breakpoints: $grid-breakpoints,$breakpoint-names: map-keys($breakpoints)) {
     $n: index($breakpoint-names , $name);
+    @debug $n; // index() 第一个参数为list  ，第二个参数为其中的一个元素值，返回的是值索引，从下标1开始
+    // map-keys() 参数为map集合，返回值为list ：以$breakpoint-names为例，返回值为： xs, sm, md, lg, xl
+    @debug $breakpoint-names;// @debug 指令用来调试
+    @debug length($breakpoint-names); // length() 用来测量list的长度 此处返回的值为5 
     @return if($n != null and $n < length($breakpoint-names),nth($breakpoint-names,$n + 1), null);
+    // scss 内置 if 函数 第一个参数为表达式，第二个为表达式正确的取值，第三个为表达式不满足的取值
+    // nth函数第一个参数为list，第二个参数为list中的第几个元素 ,返回值是list中指定下标对应的元素值
 }
 
 @function breakpoint-min($name,$breakpoints: $grid-breakpoints){
     $min: map-get($breakpoints ,$name);
+    // map-get()第一个参数为map集合，第二个参数为键key的名称，返回的是map集合中键对应的值
     @return if($min != 0, $min, null);
 }
 @function breakpoint-max($name,$breakpoints:$grid-breakpoins){
@@ -30,8 +37,9 @@
 @mixin  media-breakpoint-down($name,$breakpoints:$grid-breakpoints){
    $max:breakpoint-max($name,$breakpoints);
    @if $max {
-       @media (max-width:$max) {
+       @media (max-width:$max) {    
            @content;
+        //    @content 主要作用是用来传递内容到Mixin里面
        }
    } @else{
        @content;

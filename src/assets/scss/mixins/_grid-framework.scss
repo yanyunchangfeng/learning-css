@@ -13,6 +13,7 @@
        @for $i  from 1 through $columns{
          .col#{$infix}-#{$i}{
                @extend %grid-column;
+            //    @extend 指令用于继承预先定义好的占位符选择器%或css样式选择器
          }
        }
        .col#{$infix},
