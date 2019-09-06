@@ -32,7 +32,7 @@
               max-width: 100%;
           }
           @for $i from 1 through $columns {
-              .col#{$infix}-#{i}{
+              .col#{$infix}-#{$i}{
                   @include make-col($i,$columns);
               }
           }

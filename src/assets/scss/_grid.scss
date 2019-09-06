@@ -6,6 +6,12 @@
     .container-fluid {
         @include make-container();
     }
+    //boostrap 新版本中加入了新的变宽容器 ，小于断点前的屏幕尺寸容器都是变宽容器，大于断点屏幕尺寸的width为max-width
+    //  栅格系统的父元素必须是
+    //  1. div.container 定宽容器  max-width 为主
+    //   或者是
+    //  2.  div.container-fluid  变宽容器  width:100%
+    //  3. div.container.xl 在xl屏幕下 宽度为指定的max-width；小于xl屏幕下的width为流式布局，即宽度为100%
     @each $breakpoint, $container-max-width in $container-max-widths{
         .container-#{$breakpoint}{
             @extend .container-fluid;
@@ -15,7 +21,10 @@
                max-width:  $container-max-width;
            }
            @each $name,$width in $grid-breakpoints {
+            
+               @debug $container-max-width,$width,$container-max-width > $width;
                @if ($container-max-width > $width or $breakpoint == $name) {
+                   @debug breakpoint-infix($name, $grid-breakpoints);
                    .container#{breakpoint-infix($name, $grid-breakpoints)} {
                        @extend %responsive-container-#{$breakpoint}
                    }
