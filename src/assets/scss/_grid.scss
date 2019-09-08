@@ -26,7 +26,7 @@
                @if ($container-max-width > $width or $breakpoint == $name) {
                    @debug breakpoint-infix($name, $grid-breakpoints);
                    .container#{breakpoint-infix($name, $grid-breakpoints)} {
-                       @extend %responsive-container-#{$breakpoint}
+                       @extend %responsive-container-#{$breakpoint};
                    }
                }
            }
