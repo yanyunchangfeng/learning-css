@@ -46,7 +46,7 @@
    }
 }
 
-@mixin media-breakpoint-down($lower,$upper,$breakpoints:$grid-breakpoints){
+@mixin media-breakpoint-between($lower,$upper,$breakpoints:$grid-breakpoints){
   $min: breakpoint-min($lower,$breakpoints );
   $max: breakpoint-max($upper,$breakpoints );
   @if $min != null and $max != null {
@@ -72,7 +72,7 @@
            @content;
         }
     } @else if $max == null {
-        @include media-breakpoint-down($name,$breakpoints ) {
+        @include media-breakpoint-up($name,$breakpoints ) {
             @content;
         }
     } @else if $min == null {

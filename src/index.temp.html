@@ -6,13 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>燕云长风</title>
+    
     <style>
         .container-xl{
             background-color: aquamarine;
         }
         body{
             margin: 0;
+            height: 5000px;
         }
+        div{
+        width: 200px;
+        height: 200px;
+        background: green;
+        
+        position:absolute;
+        left:0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
     </style>
 </head>
 <body>
@@ -22,13 +36,51 @@
     <p>吹度玉门关</p>
     <div>燕云长风</div>
 
-
-    <div class="container-xl">
-       <div class="row ">
+  
+    <!-- <div class="container-xl">
+       <div class="row">
            <div class="col-sm-4">菜单</div>
            <div class="col-sm-8">内容</div>
        </div>
-    </div>
+    </div> -->
+
+    <ul id="ul">
+        <li>+</li>
+        <li>-</li>
+        <li>*</li>
+        <li>/</li>
+    </ul>
+    <canvas id="c" width="600" height="400" draggable="true"></canvas>
 </body>
+<script>
+    ctx = c.getContext('2d');
+    ctx.fillRect(0,0,100,80)
+    document.addEventListener('mousemove',()=>{
+        // console.log('mousemove')
+    })
+    document.addEventListener('mousedown',()=>{
+        // console.log('mousedown')
+    })
+    document.addEventListener('click',(e)=>{
+        // console.log(e.clientX)
+        // console.log(e.clientY)
+        // console.log('click')
+        // console.log(e.pageY)
+    })
+    const row = document.querySelector('.row');
+    row.addEventListener('click', e=>{
+        // console.log(e.offsetX,e.offsetY)
+    })
+    // console.log(row)
+    // console.log(screen.height)
+    // console.log(screen.availHeight)
+    // console.log(screen.availHeight)
+   ul.addEventListener('click',e => {
+       
+       console.log(e.target)
+       console.log(e)
+       console.log(e.currentTarget)
+   })
+</script>
 
 </html>
