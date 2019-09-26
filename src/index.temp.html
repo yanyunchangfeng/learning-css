@@ -15,7 +15,7 @@
             margin: 0;
             height: 5000px;
         }
-        div{
+        div.center-middle{
         width: 200px;
         height: 200px;
         background: green;
@@ -26,7 +26,17 @@
         bottom: 0;
         right: 0;
         margin: auto;
-    }
+       }
+       div.container-table{
+           width:300px;
+       }
+       div.table-body{
+         max-height:150px ;
+         overflow-y: scroll;
+       }
+       div.relative{
+           position: relative;
+       }
     </style>
 </head>
 <body>
@@ -34,15 +44,17 @@
     <p>苍茫云海间</p>
     <p>长风几万里</p>
     <p>吹度玉门关</p>
-    <div>燕云长风</div>
-
+    <div class="center-middle">燕云长风</div>
+    <div class="relative">
+        <div>dsadsads</div>
+    </div>
   
-    <!-- <div class="container-xl">
+    <div class="container-xl">
        <div class="row">
            <div class="col-sm-4">菜单</div>
            <div class="col-sm-8">内容</div>
        </div>
-    </div> -->
+    </div>
 
     <ul id="ul">
         <li>+</li>
@@ -51,6 +63,124 @@
         <li>/</li>
     </ul>
     <canvas id="c" width="600" height="400" draggable="true"></canvas>
+
+    <div class="container-table">
+        <div class="table-header">
+             <table>
+                 <thead>
+                     <tr>
+                         <th>燕云长风</th>
+                         <th>燕云长风</th>
+                         <th>燕云长风</th>
+                         <th>燕云长风</th>
+                     </tr>
+                 </thead>
+             </table>
+        </div>
+        <div class="table-body">
+             <table>
+                 <tbody>
+                     <tr>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                     </tr>
+                     <tr>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                     </tr>
+                     <tr>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                     </tr>
+                     <tr>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                     </tr>
+                     <tr>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                     </tr>
+                     <tr>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                     </tr>
+                     <tr>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                         <td>燕云长风</td>
+                     </tr>
+                 </tbody>
+             </table>
+        </div>
+    </div>
+
+    <table>
+            <thead>
+                    <tr>
+                        <th>燕云长风</th>
+                        <th>燕云长风</th>
+                        <th>燕云长风</th>
+                        <th>燕云长风</th>
+                    </tr>
+                </thead>
+                <tbody style="max-height: 10px;overflow-y:scroll">
+                        <tr>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                        </tr>
+                        <tr>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                        </tr>
+                        <tr>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                        </tr>
+                        <tr>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                        </tr>
+                        <tr>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                        </tr>
+                        <tr>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                        </tr>
+                        <tr>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                            <td>燕云长风</td>
+                        </tr>
+                    </tbody>
+    </table>
 </body>
 <script>
     ctx = c.getContext('2d');

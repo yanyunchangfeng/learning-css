@@ -13,6 +13,7 @@
 [scss栅格布局系统源码解析之breakpoints](src/assets/scss/mixins/_breakpoints.scss)  
 [scss栅格布局系统源码解析之grid-framwork](src/assets/scss/mixins/_breakpoints.scss)  
 [scss栅格布局系统源码解析之gird](src/assets/scss/_grid.scss)  
+[模拟react画动态导入组件，捕捉异常的处理](src/app/index.ts)  
 
 ## Jest Unit 测试
 
